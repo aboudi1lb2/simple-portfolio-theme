@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+/* global repeat */
+section {
+    width: 100%;
+}
+
+article .title {
+    text-transform: uppercase;
+}
+
+article .desc p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* landing section */
+.landing {
+    height: 100vh;
+    width:100%;
+    padding: 20px;
+    background-image: url("./images/main-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .content {
+    text-align: center;
+}
+
+.landing .content h1 {
+    text-transform: uppercase;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    color: black;
+}
+
+.landing .content button {
+    margin-top: 20px;
+    padding: 5px 10px;
+    background: none;
+    border: 4px solid black;
+}
+
+.landing .content button a {
+    font-weight: bold;
+    color: black;
+}
+
+/* nav bar */
+nav {
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    padding: 20px 100px;
+    background-color: rgb(25, 25, 25);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input#check-menu {
+    display: none;
+}
+
+label.menu-icon {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-icon span {
+    color: white;
+}
+
+/* nav bar logo */
+nav .left-side .logo {
+    cursor: pointer;
+    color: white;
+}
+
+/* nav bar right side */
+nav .right-side ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+nav .right-side ul li a {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+nav .right-side ul li a:hover {
+    color: rgb(167, 167, 167);
+}
+
+/* section1 */
+#section1 {
+    padding: 120px 30px;
+}
+
+#section1 .article-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    gap: 30px;
+}
+
+#section1 .article-container article .desc {
+    margin-top: 10px;
+}
+
+
+/* about me section */
+.about-me {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.about-me .image {
+    display: flex;
+    justify-content: center;
+}
+
+.about-me .image img {
+    max-width: 100%;
+}
+
+.about-me-details {
+    padding: 20px 70px;
+}
+
+.about-me-details article {
+    width: 100%;
+}
+
+.about-me-details article .desc {
+    width: 100%;
+}
+
+.about-me-details .skills {
+    margin-top: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: calc(50% - 25px) calc(50% - 25px);
+    gap: 50px;
+}
+
+.about-me-details .skills .card {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me-details .skills .card .icon {
+    width: 60px;
+    padding-top: 5px;
+}
+
+.about-me-details .skills .card .icon span {
+    font-size: 40px;
+    color: rgb(0, 47, 255);
+}
+
+.about-me-details .skills .card article {
+    margin-left: 10px;
+}
+
+
+/* my skills section */
+.my-skills {
+    min-height: 100vh;
+    align-content: center;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 40% 40%;
+}
+
+/* myskills left side */
+
+
+.my-skills .left-side article .desc p {
+    margin-top: 20px;
+}
+
+.my-skills .left-side article button {
+    background-color: white;
+    border: 1px solid blue;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+
+.my-skills .left-side article button a {
+    color: blue;
+}
+
+/* myskills right side */
+.my-skills .right-side .part .title h3 {
+    text-transform: uppercase;
+}
+
+.my-skills .right-side .part .progress-bar {
+    width: 100%;
+    margin: 20px 0;
+    background-color: rgb(200, 200, 200);
+}
+
+.my-skills .right-side .part .progress-bar p {
+    color: white;
+    text-align: right;
+    background-color: blue;
+    padding: 3px;
+}
+
+.progress-bar p#photoshop {
+    width: 90%
+}
+
+.progress-bar p#illustrator {
+    width: 45%
+}
+
+.progress-bar p#html-css {
+    width: 75%
+}
+
+.progress-bar p#php-mysql {
+    width: 80%
+}
+
+
+/* resume section */
+.resume {
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+/* resum geader */
+.resume .header {
+    position: relative;
+    background-color: rgba(190, 180, 240, 0.5);
+    width: 100%;
+    padding: 50px 70px;
+}
+
+.resume .header::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    border: 20px solid transparent;
+    border-top-color: rgba(190, 180, 240, 0.5);
+}
+
+.resume .header article {
+    background: none;
+    text-align: center;
+}
+
+.resume .header article .desc {
+    margin-top: 20px;
+}
+
+.resume .header article button {
+    cursor: pointer;
+    margin-top: 20px;
+    background: none;
+    border: 2px solid blue;
+    color: blue;
+    padding: 5px 15px;
+}
+
+/* resume content */
+.resume .content {
+    margin: 100px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.resume .content .right-side {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.resume .content .right-side .part h2 {
+    text-transform: uppercase;
+}
+
+.resume .content .right-side .part p {
+    margin-top: 20px;
+}
+
+.resume .content .right-side .part p span {
+    color: blue;
+}
+
+.resume .content .right-side .part button {
+    margin: 20px 0;
+    background-color: blue;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    padding: 5px 10px;
+}
+
+#line-content {
+    margin-left: 10%;
+    width: 80%;
+}
+
+/* resume footer */
+.resume .footer {
+    background-color: rgba(190, 180, 240, 0.5);
+    width: 100%;
+    padding: 50px 70px;
+}
+
+.resume .footer article {
+    text-align: center;
+}
+
+.resume .footer article .title {
+    margin-top: 20px;
+}
+
+.resume .footer article ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    background-color: none;
+}
+
+.resume .footer article ul li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    background-color: none;
+}
+
+.resume .footer article ul li.active,
+.resume .footer article ul li:hover {
+    background-color: blue;
+    border: none;
+}
+
+/* portfolio */
+.portfolio{
+    min-height: 100vh;
+    padding:70px;
+}
+
+.portfolio article {
+    text-align: center;
+}
+
+.portfolio .content {
+    width:100%;
+    margin-top:40px;
+    display: grid;
+    grid-template-columns:  calc(100% / 3 - 16px) calc(100% / 3 - 16px) calc(100% / 3 - 16px);
+    justify-content: space-between;
+    gap:24px;
+}
+
+.portfolio .content .card {
+    max-height: 400px;
+}
+
+.portfolio .content .card img {
+    width:100%;
+    height:100%;
+}
+
+/* contact me */
+.contact-me {
+    background-color:rgb(245,245,245);
+    padding: 70px 0;
+    min-height: 100vh;
+    align-content: center;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 40% 40%;
+}
+
+.contact-me .left-side article .contact-details {
+    margin-top:20px;
+}
+
+.contact-me .right-side form {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.contact-me .right-side form label {
+    margin:20px 0px;
+}
+
+.contact-me .right-side form input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.contact-me .right-side form textarea {
+    border-radius: 4px;
+}
+
+.contact-me .right-side form button {
+    width:fit-content;
+    border:none;
+    margin-top:20px;
+    background-color: blue;
+    color:white;
+    padding:5px 10px;
+    border-radius: 5px;
+}
+
+@media (max-width:1300px) {
+
+    nav {
+        padding: 20px;
+    }
+
+    nav .right-side ul {
+        gap: 10px;
+    }
+
+    /* about me */
+    .about-me {
+        padding: 70px 0;
+        background-color: rgb(245, 245, 245);
+        grid-template-columns: 100%;
+    }
+
+    .about-me .image {
+        padding: 20px 0;
+    }
+
+    .about-me .image img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width:1000px) {
+    #section1 .article-container {
+        grid-template-columns: 45% 45%;
+    }
+
+    /* myskills */
+    .my-skills {
+        padding: 40px 0;
+        grid-template-columns: 90%;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    /* resume */
+    .resume .content {
+        grid-template-columns: 90%;
+        justify-content: center;
+    }
+
+    .resume .content .left-side {
+        padding-bottom: 30px;
+        border-bottom: 2px solid rgb(200, 200, 200);
+    }
+
+    .resume .content .right-side {
+        margin-top: 40px;
+    }
+
+    .resume .footer , .resume .header {
+        padding: 40px 20px;
+    }
+
+    /* portfolio */
+    .portfolio .content {
+        grid-template-columns: calc(50% - 12px) calc(50% - 12px);
+    }
+
+    /* contact me */
+    .contact-me {
+        grid-template-columns: 90%;
+        justify-content: center;
+    }
+
+    .contact-me .left-side {
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgb(200,200,200);
+    }
+
+    .contact-me .right-side {
+        margin-top:40px;
+    }
+}
+
+@media (max-width:800px) {
+
+    /* landing */
+
+    .landing .content h1 {
+        font-size: 24px;
+
+    }
+
+    /* nav bar */
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .right-side {
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        height: calc(100vh - 60px);
+        width: 100%;
+        top: 60px;
+        overflow-y: auto;
+        background-color: rgb(25, 25, 25);
+        left: -100%;
+    }
+
+    #check-menu:checked~.right-side {
+        left: 0;
+    }
+
+    nav .right-side ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav .right-side ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* section 1 ( acticle ) */
+    #section1 .article-container {
+        grid-template-columns: 90%;
+    }
+
+    /* about me */
+    .about-me-details {
+        padding: 20px;
+    }
+
+    .about-me-details .skills {
+        grid-template-columns: 100%;
+    }
+
+    /* portfolio */
+    .portfolio{
+        padding: 70px 20px;;
+    }
+    .portfolio .content {
+        grid-template-columns: 100%;
+    }
+
+
+
+}
+
+@media (max-width:500px) {
+    .landing .content h1 {
+        font-size: 15px;
+    }
+}
